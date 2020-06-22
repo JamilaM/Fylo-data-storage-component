@@ -33,7 +33,7 @@ section.row{
     background-position: bottom;
     height: 100%;
     display: grid;
-    grid-template-columns: 25% 40%;
+    grid-template-columns: 23% 40%;
     justify-content: center;
     align-items: center;
 }
@@ -42,26 +42,28 @@ section.row{
 .row > div {
     
     background-color: hsl(228, 56%, 26%);
-    margin: 20px;
+    margin: 15px;
 }
 
 .left-div{
-    padding: 20px;
-    border-radius: 10px 80px 10px 10px;
-    
+    padding: 30px;
+    border-radius: 10px 80px 10px 10px; 
+    position: relative;
+    bottom: 10px; 
 }
 
 
 .logo img{
     
     width: 50%;
-    
-
 }
+
+
 .icons{
     
-    margin-top: 10px;
+    margin-top: 20px;
 }
+
 
 .icons img{
     
@@ -75,10 +77,44 @@ section.row{
 
 .right-div{
     
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
-    line-height: 0;
+    position: relative;
+
 }
+
+.right-div .comment{
+    width: 120px;
+    height: 60px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: -25px;
+    right: 30px;
+    font-size: 10px;
+    font-weight: bold;
+    
+}
+
+.comment::after{
+    
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -20px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+
+.comment strong{
+    font-size: 30px;  
+}
+
 
 .values{
     display: flex;
@@ -86,22 +122,53 @@ section.row{
 
 }
 
-progress{
-    
-  width: 100%;
-  -webkit-appearance: none;
-  appearance: none;
-  height: 10px;
+.progress-bar{
+  height: 12px;
+  border-radius: 20px;
+  background-color: hsl(229, 57%, 11%);
+  padding: 2px; 
+  position: relative;
  
 }
 
 
-progress::-webkit-progress-value {
-  background: -webkit-linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-  border-radius: 10px; 
+.progress {
+  width: 80%;
+  height: 8px;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: inherit; 
+  
+ 
   
 }
 
 
+.progress-bar::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: white;
+  position: absolute;
+  right: 82px;
+  bottom: 2px;
 
+}
 
+@media screen and (max-width: 798px){
+    
+    section.row{
+        grid-template-columns: auto;
+        background-image: url(images/bg-mobile.svg);
+        background-size: cover;
+
+        
+    }
+    
+    
+    .left-div{
+        bottom: 0;
+    }
+    
+
+}
