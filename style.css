@@ -1,0 +1,107 @@
+/* 
+- Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+### Neutral
+
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%)
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    
+    height: 100%;
+}
+
+body{
+    
+    font-family: 'Raleway';
+    font-size: 14px;
+    height: 100%;
+    color: white;
+}
+
+section.row{
+    background: url(images/bg-desktop.svg), hsl(229, 57%, 11%);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: bottom;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.row > div {
+    
+    background-color: hsl(228, 56%, 26%);
+    margin: 20px;
+}
+
+.left-div{
+    padding: 20px;
+    border-radius: 10px 80px 10px 10px;
+    
+}
+
+
+.logo img{
+    
+    width: 50%;
+    
+
+}
+.icons{
+    
+    margin-top: 10px;
+}
+
+.icons img{
+    
+    padding: 10px;
+    height: 35px;
+    width: 40px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.right-div{
+    
+    padding: 30px;
+    border-radius: 10px;
+    line-height: 0;
+}
+
+.values{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+progress{
+    
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+ 
+}
+
+
+progress::-webkit-progress-value {
+  background: -webkit-linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 10px; 
+  
+}
+
+
+
+
